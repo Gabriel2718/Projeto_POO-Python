@@ -1,7 +1,7 @@
 class Conta:
-    def __init__(self, numero, saldo):
+    def __init__(self, numero):
         self.__numero = numero
-        self.__saldo = saldo
+        self.__saldo = 0.0
 
     #getters
     def getNumero(self):

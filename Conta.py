@@ -33,6 +33,6 @@ class Conta:
         if(self.getSaldo() - valor >= 0):
             self.setSaldo(self.getSaldo() - valor)
             destino.setSaldo(destino.getSaldo() + valor)
-            print("Saque realizado")
+            print("Transferência realizada")
         else:
             print("Saldo insuficiente")

@@ -12,10 +12,10 @@ class Conta:
 
     #setters
     def setNumero(self, numero):
-        return self.__numero = saldo
+        self.__numero = numero
 
     def setSaldo(self, saldo):
-        return self.__saldo = saldo
+        self.__saldo = saldo
 
     #operações básicas
     def sacar(self, valor):
@@ -37,3 +37,33 @@ class Conta:
                 print("Transferência realizada")
         else:
             print("Saldo insuficiente")
+
+class ContaCorrente(Conta):
+    def __init__(self, numero, limiteCredito):
+        super().__init__(numero)
+        self.__limiteCredito = limiteCredito
+
+    #getters
+    def getLimiteCredito(self):
+        return self.__limiteCredito
+
+    #setters
+    def setLimiteCredito(self, limiteCredito):
+        self.__limiteCredito = limiteCredito
+
+class ContaPoupanca(Conta):
+    def __init__(self, numero):
+        super().__init__(numero)
+
+class ContaSalario(Conta):
+    def __init__(self, numero, rendimento):
+        super().__init__(numero)
+        self.__rendimento = rendimento
+
+    #getters
+    def getRendimento(self):
+        return self.__rendimento
+
+    #setters
+    def setRendimentos(self, rendimento):
+        self.__rendimento = rendimento

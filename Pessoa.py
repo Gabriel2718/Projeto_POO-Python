@@ -21,7 +21,7 @@ class Pessoa:
     def setCpf(self, cpf):
         self.__cpf = cpf
 
-    #method overload
+    #polimorfismo por sobrecarga
     def setConta(self, conta):
         if isinstance(conta, Conta):
             self.getContas().append(conta)

@@ -31,8 +31,9 @@ class Conta:
 
     def transferir(self, valor, destino):
         if(self.getSaldo() - valor >= 0):
-            self.setSaldo(self.getSaldo() - valor)
-            destino.setSaldo(destino.getSaldo() + valor)
-            print("Transferência realizada")
+            if isinstance(destino, Conta):
+                self.setSaldo(self.getSaldo() - valor)
+                destino.setSaldo(destino.getSaldo() + valor)
+                print("Transferência realizada")
         else:
             print("Saldo insuficiente")
